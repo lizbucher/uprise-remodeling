@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remodeling ROI Calculator | See Your Return on Investment | Uprise Remodeling</title>
+  <meta name="description" content="Calculate the return on investment for your kitchen, bathroom, or basement remodel in the KC metro. Free ROI tool from Uprise Remodeling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav solid" role="navigation" aria-label="Main navigation"><div class="container"><div class="nav-inner"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Uprise Remodeling & Design logo"></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li class="nav-dropdown"><a href="services.html">Services <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a><div class="nav-dropdown-menu"><a href="kitchen-remodels.html">Kitchen Remodels</a><a href="bathroom-remodels.html">Bathroom Remodels</a><a href="basement-finishes.html">Basement Finishes</a><a href="outdoor-projects.html">Outdoor Projects</a></div></li><li><a href="gallery.html">Gallery</a></li><li><a href="before-after.html">Before &amp; After</a></li><li><a href="plan-your-remodel.html">Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li><li><a href="tel:+19132702049" class="nav-phone"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(913) 270-2049</a></li><li><a href="contact.html" class="nav-cta">Free Estimate</a></li></ul><button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button></div></div></nav>
+  <div class="nav-drawer"><a href="index.html">Home</a><a href="about.html">About</a><span class="drawer-sub-label">Services</span><a href="kitchen-remodels.html" class="drawer-sub-link">Kitchen Remodels</a><a href="bathroom-remodels.html" class="drawer-sub-link">Bathroom Remodels</a><a href="basement-finishes.html" class="drawer-sub-link">Basement Finishes</a><a href="outdoor-projects.html" class="drawer-sub-link">Outdoor Projects</a><a href="gallery.html">Gallery</a><a href="before-after.html">Before &amp; After</a><a href="plan-your-remodel.html">Tools</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a><a href="tel:+19132702049" class="drawer-phone">(913) 270-2049</a><a href="contact.html" class="drawer-cta">Get Free Estimate</a></div>
+
+  <main>
+    <section class="section bg-white" style="padding-top: 140px;">
+      <div class="container">
+        <div class="tool-page">
+          <a href="plan-your-remodel.html" class="btn-back" style="margin-bottom: 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            All Tools
+          </a>
+          <div class="tool-question">
+            <div class="eyebrow eyebrow-center">ROI Calculator</div>
+            <h2>What's Your Remodel Worth at Resale?</h2>
+            <p>Enter your project cost to see estimated value added to your home</p>
+          </div>
+
+          <div class="calc-group">
+            <label>Project Type</label>
+            <div class="calc-toggle-group" id="roi-type">
+              <button class="calc-toggle active" data-type="kitchen" data-roi-lo="60" data-roi-hi="80">Kitchen</button>
+              <button class="calc-toggle" data-type="bathroom" data-roi-lo="55" data-roi-hi="70">Bathroom</button>
+              <button class="calc-toggle" data-type="basement" data-roi-lo="70" data-roi-hi="75">Basement</button>
+              <button class="calc-toggle" data-type="deck" data-roi-lo="65" data-roi-hi="80">Deck/Outdoor</button>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label>Your Estimated Project Cost</label>
+            <div class="calc-value-display" id="roi-cost-display">$40,000</div>
+            <input type="range" class="calc-slider" id="roi-slider" min="5000" max="150000" value="40000" step="1000">
+            <div class="calc-slider-labels"><span>$5,000</span><span>$150,000</span></div>
+          </div>
+
+          <div class="calc-result highlight">
+            <h3>Estimated Value Added to Your Home</h3>
+            <div class="calc-result-value" id="roi-result">$24,000 – $32,000</div>
+            <div class="calc-result-range" id="roi-pct">60% – 80% ROI</div>
+            <div class="finance-display" style="margin-top: 24px;">
+              <div class="finance-stat">
+                <div class="finance-stat-value" id="roi-cost-stat">$40,000</div>
+                <div class="finance-stat-label">Your Investment</div>
+              </div>
+              <div class="finance-stat">
+                <div class="finance-stat-value" id="roi-value-stat">$28,000</div>
+                <div class="finance-stat-label">Avg Value Added</div>
+              </div>
+              <div class="finance-stat">
+                <div class="finance-stat-value" id="roi-net-stat">$12,000</div>
+                <div class="finance-stat-label">Net Cost After ROI</div>
+              </div>
+            </div>
+            <p class="calc-result-cta" style="margin-top: 24px;">ROI figures based on national remodeling data adjusted for the KC metro market.<br><strong>Plus: you get to enjoy the space every day.</strong></p>
+          </div>
+
+          <div class="text-center" style="margin-top: 32px;">
+            <a href="contact.html" class="btn btn-primary btn-lg">Get Your Free Estimate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand"><img src="images/logo.png" alt="Uprise Remodeling & Design"><p class="footer-tagline">"Building trust with quality work."</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="kitchen-remodels.html">Kitchen Remodels</a></li><li><a href="bathroom-remodels.html">Bathroom Remodels</a></li><li><a href="basement-finishes.html">Basement Finishes</a></li><li><a href="outdoor-projects.html">Outdoor Projects</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+19132702049">(913) 270-2049</a></li><li><a href="mailto:office@upriseremodeling.com">office@upriseremodeling.com</a></li></ul></div></div><div class="footer-bottom"><span class="footer-legal">&copy; 2026 Uprise Remodeling & Design. All rights reserved.</span><span class="footer-credit">Site by <a href="https://newsummitdigital.com" target="_blank" rel="noopener">New Summit Digital</a></span></div></div></footer>
+  <script src="main.js"></script>
+  <script>
+  (function() {
+    let roiLo = 60, roiHi = 80;
+    const slider = document.getElementById('roi-slider');
+    const fmt = n => '$' + n.toLocaleString();
+
+    function calc() {
+      const cost = parseInt(slider.value);
+      document.getElementById('roi-cost-display').textContent = fmt(cost);
+      const lo = Math.round(cost * roiLo / 100 / 500) * 500;
+      const hi = Math.round(cost * roiHi / 100 / 500) * 500;
+      const avg = Math.round((lo + hi) / 2 / 500) * 500;
+      document.getElementById('roi-result').textContent = fmt(lo) + ' – ' + fmt(hi);
+      document.getElementById('roi-pct').textContent = roiLo + '% – ' + roiHi + '% ROI';
+      document.getElementById('roi-cost-stat').textContent = fmt(cost);
+      document.getElementById('roi-value-stat').textContent = fmt(avg);
+      document.getElementById('roi-net-stat').textContent = fmt(cost - avg);
+    }
+
+    document.getElementById('roi-type').addEventListener('click', function(e) {
+      const btn = e.target.closest('.calc-toggle');
+      if (!btn) return;
+      this.querySelectorAll('.calc-toggle').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      roiLo = parseInt(btn.dataset.roiLo);
+      roiHi = parseInt(btn.dataset.roiHi);
+      calc();
+    });
+
+    slider.addEventListener('input', calc);
+    calc();
+  })();
+  </script>
+</body>
+</html>

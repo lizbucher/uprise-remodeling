@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Timeline Estimator | How Long Will Your Remodel Take? | Uprise Remodeling</title>
+  <meta name="description" content="See a week-by-week remodeling timeline for kitchens, bathrooms, basements, and outdoor projects in the KC metro. Plan ahead with Uprise Remodeling & Design.">
+  <link rel="canonical" href="https://www.upriseremodeling.com/project-timeline">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav solid" role="navigation" aria-label="Main navigation"><div class="container"><div class="nav-inner"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Uprise Remodeling & Design logo"></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li class="nav-dropdown"><a href="services.html">Services <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a><div class="nav-dropdown-menu"><a href="kitchen-remodels.html">Kitchen Remodels</a><a href="bathroom-remodels.html">Bathroom Remodels</a><a href="basement-finishes.html">Basement Finishes</a><a href="outdoor-projects.html">Outdoor Projects</a></div></li><li><a href="gallery.html">Gallery</a></li><li><a href="before-after.html">Before &amp; After</a></li><li><a href="plan-your-remodel.html">Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li><li><a href="tel:+19132702049" class="nav-phone"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(913) 270-2049</a></li><li><a href="contact.html" class="nav-cta">Free Estimate</a></li></ul><button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button></div></div></nav>
+  <div class="nav-drawer"><a href="index.html">Home</a><a href="about.html">About</a><span class="drawer-sub-label">Services</span><a href="kitchen-remodels.html" class="drawer-sub-link">Kitchen Remodels</a><a href="bathroom-remodels.html" class="drawer-sub-link">Bathroom Remodels</a><a href="basement-finishes.html" class="drawer-sub-link">Basement Finishes</a><a href="outdoor-projects.html" class="drawer-sub-link">Outdoor Projects</a><a href="gallery.html">Gallery</a><a href="before-after.html">Before &amp; After</a><a href="plan-your-remodel.html">Tools</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a><a href="tel:+19132702049" class="drawer-phone">(913) 270-2049</a><a href="contact.html" class="drawer-cta">Get Free Estimate</a></div>
+
+  <main>
+    <section class="section bg-white" style="padding-top: 140px;">
+      <div class="container">
+        <div class="tool-page">
+          <a href="plan-your-remodel.html" class="btn-back" style="margin-bottom: 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            All Tools
+          </a>
+          <div class="tool-question">
+            <div class="eyebrow eyebrow-center">Project Timeline</div>
+            <h2>How Long Will Your Remodel Take?</h2>
+            <p>Select a project type to see a typical week-by-week timeline for the KC metro</p>
+          </div>
+
+          <!-- Project Type -->
+          <div class="calc-group">
+            <label>Project Type</label>
+            <div class="calc-toggle-group" id="timeline-type">
+              <button class="calc-toggle active" data-type="kitchen">Kitchen</button>
+              <button class="calc-toggle" data-type="bathroom">Bathroom</button>
+              <button class="calc-toggle" data-type="basement">Basement</button>
+              <button class="calc-toggle" data-type="outdoor">Outdoor</button>
+            </div>
+          </div>
+
+          <!-- Scope Level -->
+          <div class="calc-group">
+            <label>Scope of Work</label>
+            <div class="calc-toggle-group" id="timeline-scope">
+              <button class="calc-toggle" data-scope="minor">Minor Update</button>
+              <button class="calc-toggle active" data-scope="standard">Standard Remodel</button>
+              <button class="calc-toggle" data-scope="major">Major Overhaul</button>
+            </div>
+          </div>
+
+          <!-- Timeline Result -->
+          <div class="calc-result highlight" id="timeline-summary">
+            <h3 id="timeline-title">Standard Kitchen Remodel</h3>
+            <div class="calc-result-value" id="timeline-duration">6 – 8 Weeks</div>
+            <div class="calc-result-range" id="timeline-note">Mid-range kitchen with new cabinets, counters, and appliances</div>
+          </div>
+
+          <!-- Visual Timeline -->
+          <div class="timeline-track" id="timeline-track">
+            <!-- Populated by JS -->
+          </div>
+
+          <div class="text-center" style="margin-top: 40px;">
+            <a href="contact.html" class="btn btn-primary btn-lg">Schedule Your Project &mdash; Free Estimate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand"><img src="images/logo.png" alt="Uprise Remodeling & Design"><p class="footer-tagline">"Building trust with quality work."</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="kitchen-remodels.html">Kitchen Remodels</a></li><li><a href="bathroom-remodels.html">Bathroom Remodels</a></li><li><a href="basement-finishes.html">Basement Finishes</a></li><li><a href="outdoor-projects.html">Outdoor Projects</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="plan-your-remodel.html">Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+19132702049">(913) 270-2049</a></li><li><a href="mailto:office@upriseremodeling.com">office@upriseremodeling.com</a></li></ul></div></div><div class="footer-bottom"><span class="footer-legal">&copy; 2026 Uprise Remodeling & Design. All rights reserved.</span><span class="footer-credit">Site by <a href="https://newsummitdigital.com" target="_blank" rel="noopener">New Summit Digital</a></span></div></div></footer>
+  <script src="main.js"></script>
+  <script>
+  (function() {
+    const timelines = {
+      kitchen: {
+        minor: {
+          duration: '2 – 3 Weeks',
+          note: 'Cabinet refacing, new hardware, backsplash update',
+          weeks: [
+            { week: 1, title: 'Prep & Demo', desc: 'Protect floors, remove old backsplash and hardware' },
+            { week: 2, title: 'Install & Finish', desc: 'New cabinet faces, hardware, backsplash tile' },
+            { week: 3, title: 'Final Details', desc: 'Grout, caulk, touch-up paint, final clean' }
+          ]
+        },
+        standard: {
+          duration: '6 – 8 Weeks',
+          note: 'Mid-range kitchen with new cabinets, counters, and appliances',
+          weeks: [
+            { week: 1, title: 'Design & Permits', desc: 'Finalize layout, order materials, pull permits' },
+            { week: 2, title: 'Demo & Rough-In', desc: 'Tear out old kitchen, update plumbing and electrical' },
+            { week: 3, title: 'Framing & Drywall', desc: 'Any wall changes, patch and finish drywall' },
+            { week: 4, title: 'Cabinet Install', desc: 'Set base and wall cabinets, verify level and plumb' },
+            { week: 5, title: 'Countertops & Tile', desc: 'Template, fabricate, and install counters; tile backsplash' },
+            { week: 6, title: 'Appliances & Plumbing', desc: 'Set appliances, install sink and faucet' },
+            { week: 7, title: 'Paint & Trim', desc: 'Finish painting, install trim, under-cabinet lighting' },
+            { week: 8, title: 'Final Walkthrough', desc: 'Punch list, deep clean, hand over keys' }
+          ]
+        },
+        major: {
+          duration: '10 – 14 Weeks',
+          note: 'Full gut renovation — layout change, custom cabinets, premium finishes',
+          weeks: [
+            { week: 1, title: 'Design & Engineering', desc: 'Architectural plans, structural review, permit applications' },
+            { week: 2, title: 'Full Demo', desc: 'Gut to studs, haul debris, inspect structure' },
+            { week: 3, title: 'Structural Work', desc: 'Move walls, add headers, reinforce floors' },
+            { week: 4, title: 'Mechanical Rough-In', desc: 'New plumbing lines, electrical panel upgrade, HVAC' },
+            { week: 5, title: 'Inspections & Drywall', desc: 'City inspections, hang and finish drywall' },
+            { week: 6, title: 'Custom Cabinets', desc: 'Receive and install custom cabinetry' },
+            { week: 7, title: 'Flooring', desc: 'Install hardwood, tile, or luxury vinyl plank' },
+            { week: 8, title: 'Countertops', desc: 'Template, fabricate, and set stone counters' },
+            { week: 9, title: 'Backsplash & Tile', desc: 'Install accent tile, grout, and seal' },
+            { week: 10, title: 'Appliances & Fixtures', desc: 'Professional-grade appliances, plumbing fixtures, lighting' },
+            { week: 11, title: 'Paint & Trim', desc: 'Final coat, crown molding, baseboards' },
+            { week: 12, title: 'Punch List & Walkthrough', desc: 'Touch-ups, deep clean, final city inspection' }
+          ]
+        }
+      },
+      bathroom: {
+        minor: {
+          duration: '1 – 2 Weeks',
+          note: 'New vanity, faucet, mirror, and paint refresh',
+          weeks: [
+            { week: 1, title: 'Remove & Replace', desc: 'Swap vanity, faucet, mirror, and light fixture' },
+            { week: 2, title: 'Paint & Finish', desc: 'Fresh paint, new accessories, caulk tub/shower' }
+          ]
+        },
+        standard: {
+          duration: '4 – 6 Weeks',
+          note: 'Full bathroom remodel with new tile, vanity, and fixtures',
+          weeks: [
+            { week: 1, title: 'Design & Order', desc: 'Select materials, order tile and vanity, schedule trades' },
+            { week: 2, title: 'Demo & Plumbing', desc: 'Remove old fixtures, update plumbing rough-in' },
+            { week: 3, title: 'Waterproofing & Tile', desc: 'Cement board, waterproof membrane, set floor and wall tile' },
+            { week: 4, title: 'Vanity & Fixtures', desc: 'Install vanity, toilet, shower door or curtain rod' },
+            { week: 5, title: 'Electrical & Paint', desc: 'New lighting, exhaust fan, paint walls and trim' },
+            { week: 6, title: 'Final Details', desc: 'Grout seal, accessories, mirrors, final clean' }
+          ]
+        },
+        major: {
+          duration: '8 – 10 Weeks',
+          note: 'Luxury bathroom — layout change, walk-in shower, heated floors',
+          weeks: [
+            { week: 1, title: 'Design & Permits', desc: 'Custom layout, structural review, permit filing' },
+            { week: 2, title: 'Demo to Studs', desc: 'Full gut, inspect subfloor and framing' },
+            { week: 3, title: 'Plumbing Relocation', desc: 'Move drains, supply lines for new layout' },
+            { week: 4, title: 'Electrical & Radiant Heat', desc: 'In-floor heating, new circuits, exhaust' },
+            { week: 5, title: 'Waterproofing', desc: 'Full shower pan build, cement board, membrane' },
+            { week: 6, title: 'Tile Work', desc: 'Large-format tile, shower niche, accent wall' },
+            { week: 7, title: 'Vanity & Glass', desc: 'Double vanity, frameless glass shower enclosure' },
+            { week: 8, title: 'Fixtures & Lighting', desc: 'Rain shower head, freestanding tub, sconces' },
+            { week: 9, title: 'Paint, Trim & Accessories', desc: 'Final paint, mirrors, towel bars, toilet paper holder' },
+            { week: 10, title: 'Walkthrough', desc: 'Punch list, grout seal, deep clean' }
+          ]
+        }
+      },
+      basement: {
+        minor: {
+          duration: '2 – 4 Weeks',
+          note: 'Paint, new flooring, and improved lighting in an already-finished space',
+          weeks: [
+            { week: 1, title: 'Prep & Paint', desc: 'Patch drywall, prime, and paint walls and ceiling' },
+            { week: 2, title: 'Flooring', desc: 'Install luxury vinyl plank or carpet tile' },
+            { week: 3, title: 'Lighting & Electric', desc: 'Add recessed lights, update outlets' },
+            { week: 4, title: 'Trim & Cleanup', desc: 'Install baseboards, clean, and stage' }
+          ]
+        },
+        standard: {
+          duration: '8 – 12 Weeks',
+          note: 'Full basement finish — framing, drywall, flooring, bathroom, and bar area',
+          weeks: [
+            { week: 1, title: 'Design & Permits', desc: 'Floor plan, egress planning, permit applications' },
+            { week: 2, title: 'Framing', desc: 'Build walls, frame bathroom and bar area' },
+            { week: 3, title: 'Mechanical Rough-In', desc: 'Plumbing, electrical, HVAC ductwork' },
+            { week: 4, title: 'Inspections', desc: 'City framing and mechanical inspections' },
+            { week: 5, title: 'Insulation & Drywall', desc: 'Batt insulation, hang and tape drywall' },
+            { week: 6, title: 'Drywall Finish', desc: 'Mud, sand, prime — ready for paint' },
+            { week: 7, title: 'Flooring', desc: 'LVP, tile in bathroom, carpet in bedrooms' },
+            { week: 8, title: 'Paint', desc: 'Walls, ceilings, trim throughout' },
+            { week: 9, title: 'Bathroom Tile & Fixtures', desc: 'Shower tile, vanity, toilet install' },
+            { week: 10, title: 'Bar & Built-Ins', desc: 'Countertop, cabinetry, shelving' },
+            { week: 11, title: 'Electrical Trim-Out', desc: 'Outlets, switches, light fixtures, recessed cans' },
+            { week: 12, title: 'Final Walkthrough', desc: 'Punch list, deep clean, final inspection' }
+          ]
+        },
+        major: {
+          duration: '14 – 18 Weeks',
+          note: 'Luxury basement — home theater, wet bar, bedroom suite, bathroom',
+          weeks: [
+            { week: 1, title: 'Architecture & Design', desc: 'Custom plans, theater layout, egress windows' },
+            { week: 2, title: 'Egress & Waterproofing', desc: 'Cut egress window wells, apply waterproofing' },
+            { week: 3, title: 'Framing', desc: 'All rooms, soffits for mechanicals, theater walls' },
+            { week: 4, title: 'Plumbing & HVAC', desc: 'Full bathroom rough-in, dedicated HVAC zones' },
+            { week: 5, title: 'Electrical', desc: 'Dedicated theater circuit, in-wall speaker wiring, bar outlets' },
+            { week: 6, title: 'Inspections', desc: 'All rough-in inspections before closing walls' },
+            { week: 7, title: 'Soundproofing & Insulation', desc: 'Sound batts in theater walls, standard insulation elsewhere' },
+            { week: 8, title: 'Drywall', desc: 'Hang, tape, mud, and sand all surfaces' },
+            { week: 9, title: 'Tile Work', desc: 'Bathroom shower, floor tile, bar backsplash' },
+            { week: 10, title: 'Flooring', desc: 'Engineered hardwood, carpet in bedrooms, LVP in common areas' },
+            { week: 11, title: 'Cabinetry & Bar', desc: 'Wet bar cabinets, countertops, bedroom closet systems' },
+            { week: 12, title: 'Paint & Trim', desc: 'Full interior paint, crown molding, baseboards' },
+            { week: 13, title: 'Theater Install', desc: 'Projector, screen, speakers, acoustic panels, seating' },
+            { week: 14, title: 'Fixtures & Final Electrical', desc: 'All light fixtures, bathroom fixtures, dimmer controls' },
+            { week: 15, title: 'Punch List', desc: 'Touch-ups, adjustments, deep clean' },
+            { week: 16, title: 'Final Inspection & Handoff', desc: 'City final, certificate of occupancy, key handover' }
+          ]
+        }
+      },
+      outdoor: {
+        minor: {
+          duration: '1 – 2 Weeks',
+          note: 'Deck stain/seal, new railing, or small paver patio',
+          weeks: [
+            { week: 1, title: 'Prep & Materials', desc: 'Power wash, sand, order materials' },
+            { week: 2, title: 'Install & Finish', desc: 'Stain/seal deck, set pavers, or install railing' }
+          ]
+        },
+        standard: {
+          duration: '4 – 6 Weeks',
+          note: 'New deck or patio with basic landscaping and lighting',
+          weeks: [
+            { week: 1, title: 'Design & Permits', desc: 'Site plan, material selection, permit if needed' },
+            { week: 2, title: 'Site Prep', desc: 'Grading, footings or base compaction' },
+            { week: 3, title: 'Framing / Base', desc: 'Deck framing or paver base and sand layer' },
+            { week: 4, title: 'Decking / Pavers', desc: 'Lay composite decking or set pavers' },
+            { week: 5, title: 'Railing & Stairs', desc: 'Install railing system, build stairs, add trim' },
+            { week: 6, title: 'Lighting & Landscaping', desc: 'Low-voltage lights, plantings, mulch, cleanup' }
+          ]
+        },
+        major: {
+          duration: '8 – 12 Weeks',
+          note: 'Full outdoor living space — pergola, kitchen, fire pit, landscaping',
+          weeks: [
+            { week: 1, title: 'Design & Engineering', desc: 'Landscape architecture, structural plans, permits' },
+            { week: 2, title: 'Excavation', desc: 'Grade site, dig footings, run utilities' },
+            { week: 3, title: 'Foundation & Footings', desc: 'Pour concrete pads, set post bases' },
+            { week: 4, title: 'Hardscape', desc: 'Retaining walls, paver patio, stone work' },
+            { week: 5, title: 'Pergola / Structure', desc: 'Build pergola or covered structure frame' },
+            { week: 6, title: 'Outdoor Kitchen', desc: 'Set counters, grill island, plumb sink, run gas' },
+            { week: 7, title: 'Electrical & Gas', desc: 'Lighting circuits, outlets, gas line for fire pit' },
+            { week: 8, title: 'Fire Pit & Seating', desc: 'Build fire pit, install built-in seating' },
+            { week: 9, title: 'Roofing & Finish', desc: 'Roof pergola, stain/paint, install fans' },
+            { week: 10, title: 'Landscaping', desc: 'Plants, sod, irrigation, decorative rock' },
+            { week: 11, title: 'Lighting & Audio', desc: 'Path lights, string lights, outdoor speakers' },
+            { week: 12, title: 'Final Walkthrough', desc: 'Punch list, adjust irrigation, final clean' }
+          ]
+        }
+      }
+    };
+
+    let currentType = 'kitchen';
+    let currentScope = 'standard';
+
+    function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+    function renderTimeline() {
+      const data = timelines[currentType][currentScope];
+      const scopeLabels = { minor: 'Minor', standard: 'Standard', major: 'Major' };
+      const typeLabels = { kitchen: 'Kitchen Remodel', bathroom: 'Bathroom Remodel', basement: 'Basement Finish', outdoor: 'Outdoor Project' };
+
+      document.getElementById('timeline-title').textContent = scopeLabels[currentScope] + ' ' + typeLabels[currentType];
+      document.getElementById('timeline-duration').textContent = data.duration;
+      document.getElementById('timeline-note').textContent = data.note;
+
+      const track = document.getElementById('timeline-track');
+      track.innerHTML = '';
+
+      data.weeks.forEach(function(w, i) {
+        const item = document.createElement('div');
+        item.className = 'timeline-item';
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.innerHTML =
+          '<div class="timeline-week">Week ' + w.week + '</div>' +
+          '<div class="timeline-content">' +
+            '<h4>' + w.title + '</h4>' +
+            '<p>' + w.desc + '</p>' +
+          '</div>';
+        track.appendChild(item);
+
+        // Staggered animation
+        setTimeout(function() {
+          item.style.transition = 'opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)';
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, 80 * i);
+      });
+    }
+
+    // Type toggles
+    document.getElementById('timeline-type').addEventListener('click', function(e) {
+      var btn = e.target.closest('.calc-toggle');
+      if (!btn) return;
+      this.querySelectorAll('.calc-toggle').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentType = btn.dataset.type;
+      renderTimeline();
+    });
+
+    // Scope toggles
+    document.getElementById('timeline-scope').addEventListener('click', function(e) {
+      var btn = e.target.closest('.calc-toggle');
+      if (!btn) return;
+      this.querySelectorAll('.calc-toggle').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentScope = btn.dataset.scope;
+      renderTimeline();
+    });
+
+    renderTimeline();
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Style Quiz | Find Your Remodeling Aesthetic | Uprise Remodeling</title>
+  <meta name="description" content="Take our free design style quiz to discover your remodeling aesthetic — modern, farmhouse, traditional, or transitional. Serving the KC metro.">
+  <link rel="canonical" href="https://www.upriseremodeling.com/design-quiz">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav solid" role="navigation" aria-label="Main navigation"><div class="container"><div class="nav-inner"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Uprise Remodeling & Design logo"></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li class="nav-dropdown"><a href="services.html">Services <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a><div class="nav-dropdown-menu"><a href="kitchen-remodels.html">Kitchen Remodels</a><a href="bathroom-remodels.html">Bathroom Remodels</a><a href="basement-finishes.html">Basement Finishes</a><a href="outdoor-projects.html">Outdoor Projects</a></div></li><li><a href="gallery.html">Gallery</a></li><li><a href="before-after.html">Before &amp; After</a></li><li><a href="plan-your-remodel.html">Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li><li><a href="tel:+19132702049" class="nav-phone"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(913) 270-2049</a></li><li><a href="contact.html" class="nav-cta">Free Estimate</a></li></ul><button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button></div></div></nav>
+  <div class="nav-drawer"><a href="index.html">Home</a><a href="about.html">About</a><span class="drawer-sub-label">Services</span><a href="kitchen-remodels.html" class="drawer-sub-link">Kitchen Remodels</a><a href="bathroom-remodels.html" class="drawer-sub-link">Bathroom Remodels</a><a href="basement-finishes.html" class="drawer-sub-link">Basement Finishes</a><a href="outdoor-projects.html" class="drawer-sub-link">Outdoor Projects</a><a href="gallery.html">Gallery</a><a href="before-after.html">Before &amp; After</a><a href="plan-your-remodel.html">Tools</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a><a href="tel:+19132702049" class="drawer-phone">(913) 270-2049</a><a href="contact.html" class="drawer-cta">Get Free Estimate</a></div>
+
+  <main>
+    <section class="section bg-white" style="padding-top: 140px;">
+      <div class="container">
+        <div class="tool-page" id="quiz-container">
+          <!-- Progress -->
+          <div class="tool-progress">
+            <span id="quiz-step">Step 1 of 5</span>
+            <span id="quiz-pct">0% Complete</span>
+          </div>
+          <div class="tool-progress-bar"><div class="tool-progress-fill" id="quiz-fill" style="width: 0%"></div></div>
+
+          <!-- Steps rendered by JS -->
+          <div id="quiz-content"></div>
+
+          <!-- Navigation -->
+          <div class="tool-nav" id="quiz-nav">
+            <button class="btn-back" id="quiz-back" style="visibility: hidden;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              Back
+            </button>
+            <span></span>
+          </div>
+
+          <!-- Dots -->
+          <div class="tool-steps-dots" id="quiz-dots"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand"><img src="images/logo.png" alt="Uprise Remodeling & Design"><p class="footer-tagline">"Building trust with quality work."</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="kitchen-remodels.html">Kitchen Remodels</a></li><li><a href="bathroom-remodels.html">Bathroom Remodels</a></li><li><a href="basement-finishes.html">Basement Finishes</a></li><li><a href="outdoor-projects.html">Outdoor Projects</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="plan-your-remodel.html">Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+19132702049">(913) 270-2049</a></li><li><a href="mailto:office@upriseremodeling.com">office@upriseremodeling.com</a></li></ul></div></div><div class="footer-bottom"><span class="footer-legal">&copy; 2026 Uprise Remodeling & Design. All rights reserved.</span><span class="footer-credit">Site by <a href="https://newsummitdigital.com" target="_blank" rel="noopener">New Summit Digital</a></span></div></div></footer>
+
+  <script src="main.js"></script>
+  <script>
+  (function() {
+    const questions = [
+      {
+        title: "Which kitchen vibe speaks to you?",
+        subtitle: "Choose the style that feels most like home",
+        options: [
+          { letter: "A", label: "Clean & Modern", desc: "Flat panels, minimal hardware, open spaces", style: "modern" },
+          { letter: "B", label: "Warm & Rustic", desc: "Wood tones, farmhouse charm, cozy textures", style: "farmhouse" },
+          { letter: "C", label: "Classic Elegance", desc: "Timeless details, rich finishes, refined", style: "traditional" },
+          { letter: "D", label: "Bold & Unique", desc: "Statement pieces, mixed materials, expressive", style: "transitional" }
+        ]
+      },
+      {
+        title: "Pick your ideal countertop",
+        subtitle: "What would you love to cook on every day?",
+        options: [
+          { letter: "A", label: "White Quartz", desc: "Clean, low-maintenance, modern feel", style: "modern" },
+          { letter: "B", label: "Butcher Block", desc: "Warm wood surface, natural character", style: "farmhouse" },
+          { letter: "C", label: "Polished Granite", desc: "Rich stone with depth and movement", style: "traditional" },
+          { letter: "D", label: "Concrete or Soapstone", desc: "Industrial texture, unique patina", style: "transitional" }
+        ]
+      },
+      {
+        title: "What hardware finish do you prefer?",
+        subtitle: "The small details that define the room",
+        options: [
+          { letter: "A", label: "Brushed Nickel or Chrome", desc: "Sleek, cool-toned, minimal profile", style: "modern" },
+          { letter: "B", label: "Matte Black", desc: "Contrast statement, farmhouse staple", style: "farmhouse" },
+          { letter: "C", label: "Polished Brass or Gold", desc: "Warm luxury, classic presence", style: "traditional" },
+          { letter: "D", label: "Mixed Metals", desc: "Layer different finishes for personality", style: "transitional" }
+        ]
+      },
+      {
+        title: "How do you feel about open shelving?",
+        subtitle: "Storage style says a lot about your design taste",
+        options: [
+          { letter: "A", label: "Love It — Less Is More", desc: "Floating shelves, curated display", style: "modern" },
+          { letter: "B", label: "Some Open, Some Closed", desc: "Mix of display shelving and cabinet doors", style: "farmhouse" },
+          { letter: "C", label: "Prefer Closed Cabinets", desc: "Everything tucked away, clean surfaces", style: "traditional" },
+          { letter: "D", label: "Industrial Open Racking", desc: "Metal brackets, pipe shelving, raw materials", style: "transitional" }
+        ]
+      },
+      {
+        title: "Pick your dream backsplash",
+        subtitle: "The finishing touch that ties it all together",
+        options: [
+          { letter: "A", label: "Large Format Porcelain", desc: "Minimal grout lines, seamless look", style: "modern" },
+          { letter: "B", label: "Subway Tile", desc: "Classic brick pattern, white or colored", style: "farmhouse" },
+          { letter: "C", label: "Natural Stone Mosaic", desc: "Marble herringbone, elegant pattern", style: "traditional" },
+          { letter: "D", label: "Patterned or Zellige Tile", desc: "Handmade texture, visual interest", style: "transitional" }
+        ]
+      }
+    ];
+
+    const styles = {
+      modern: { name: "Clean Contemporary", desc: "You gravitate toward sleek lines, minimal hardware, and a calm, uncluttered aesthetic. Think flat-panel cabinets, quartz countertops, integrated lighting, and neutral palettes with intentional contrast. Your home feels curated and intentional." },
+      farmhouse: { name: "Modern Farmhouse", desc: "You love warmth, texture, and approachable style. Shaker cabinets, subway tile, wood tones, matte black hardware — your space feels inviting and lived-in, but never dated. It's comfort with design intention." },
+      traditional: { name: "Classic Traditional", desc: "You appreciate timeless details — raised-panel cabinetry, crown molding, granite, polished metals. Your home feels established, refined, and built to last. Nothing trendy, everything proven." },
+      transitional: { name: "Eclectic Transitional", desc: "You don't fit in one box — and your home shouldn't either. You blend contemporary clean lines with warmer traditional touches, mix metals, and aren't afraid of a statement piece. Your space has personality." }
+    };
+
+    let current = 0;
+    let answers = [];
+    const container = document.getElementById('quiz-content');
+    const stepEl = document.getElementById('quiz-step');
+    const pctEl = document.getElementById('quiz-pct');
+    const fillEl = document.getElementById('quiz-fill');
+    const backBtn = document.getElementById('quiz-back');
+    const dotsEl = document.getElementById('quiz-dots');
+
+    function renderDots() {
+      dotsEl.innerHTML = questions.map((_, i) => 
+        `<div class="tool-dot ${i < current ? 'completed' : ''} ${i === current ? 'active' : ''}"></div>`
+      ).join('');
+    }
+
+    function renderStep() {
+      if (current >= questions.length) { showResult(); return; }
+      const q = questions[current];
+      const pct = Math.round((current / questions.length) * 100);
+      stepEl.textContent = `Step ${current + 1} of ${questions.length}`;
+      pctEl.textContent = `${pct}% Complete`;
+      fillEl.style.width = pct + '%';
+      backBtn.style.visibility = current > 0 ? 'visible' : 'hidden';
+
+      container.innerHTML = `
+        <div class="tool-question">
+          <h2>${q.title}</h2>
+          <p>${q.subtitle}</p>
+        </div>
+        <div class="tool-options">
+          ${q.options.map((o, i) => `
+            <div class="tool-option ${answers[current] === i ? 'selected' : ''}" data-idx="${i}" data-style="${o.style}">
+              <div class="tool-option-letter">${o.letter}</div>
+              <div class="tool-option-text"><strong>${o.label}</strong><span>${o.desc}</span></div>
+              <svg class="tool-option-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      container.querySelectorAll('.tool-option').forEach(opt => {
+        opt.addEventListener('click', function() {
+          const idx = parseInt(this.dataset.idx);
+          answers[current] = idx;
+          container.querySelectorAll('.tool-option').forEach(o => o.classList.remove('selected'));
+          this.classList.add('selected');
+          setTimeout(() => { current++; renderStep(); renderDots(); }, 400);
+        });
+      });
+      renderDots();
+    }
+
+    function showResult() {
+      const counts = { modern: 0, farmhouse: 0, traditional: 0, transitional: 0 };
+      answers.forEach((ans, qi) => {
+        const style = questions[qi].options[ans].style;
+        counts[style]++;
+      });
+      const winner = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+      const result = styles[winner];
+
+      stepEl.textContent = 'Complete!';
+      pctEl.textContent = '100%';
+      fillEl.style.width = '100%';
+      dotsEl.innerHTML = questions.map(() => '<div class="tool-dot completed"></div>').join('');
+      document.getElementById('quiz-nav').style.display = 'none';
+
+      container.innerHTML = `
+        <div class="tool-result-card">
+          <div class="eyebrow eyebrow-center" style="margin-bottom: 12px;">Your Design Style</div>
+          <h2>You're</h2>
+          <div class="result-style">${result.name}</div>
+          <p>${result.desc}</p>
+          <p style="font-size: 14px; color: var(--text-muted);">Bring this result to your free consultation — we'll design around your style.</p>
+          <div style="margin-top: 28px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary">Book Your Free Consultation</a>
+            <button class="btn btn-outline-dark" onclick="location.reload()">Retake Quiz</button>
+          </div>
+        </div>
+      `;
+    }
+
+    backBtn.addEventListener('click', () => { if (current > 0) { current--; renderStep(); } });
+    renderStep();
+  })();
+  </script>
+</body>
+</html>
