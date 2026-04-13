@@ -202,6 +202,48 @@ p:last-child {
   border: 0;
 }
 
+/* Skip navigation link — visible on focus for keyboard users */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 24px;
+  background: var(--teal);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-nav:focus {
+  top: 16px;
+}
+
+/* Global focus styles for keyboard accessibility */
+*:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px var(--teal-glow);
+}
+
 .section {
   padding: var(--section-pad) 0;
 }
