@@ -459,10 +459,11 @@ p:last-child {
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
+  margin-right: 48px;
 }
 
 .nav-logo img {
-  height: 40px;
+  height: 44px;
   width: auto;
 }
 
@@ -477,7 +478,7 @@ p:last-child {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
   list-style: none;
 }
 
