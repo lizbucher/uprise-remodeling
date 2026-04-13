@@ -480,6 +480,7 @@ p:last-child {
   align-items: center;
   gap: 24px;
   list-style: none;
+  margin-left: 40px;
 }
 
 .nav-links a {
