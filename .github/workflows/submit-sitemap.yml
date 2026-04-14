@@ -24,6 +24,6 @@ jobs:
       - name: Submit sitemap
         env:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
-          SITE_URL: https://www.upriseremodeling.com/
+          SITE_URL: sc-domain:upriseremodeling.com
           SITEMAP_URL: https://www.upriseremodeling.com/sitemap.xml
         run: python scripts/submit-sitemap.py

@@ -839,3 +839,30 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Search Console tables */
+.gsc-table-wrap { overflow-x: auto; }
+.gsc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.gsc-table th,
+.gsc-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.gsc-table th {
+  font-weight: 600;
+  color: #555;
+  background: rgba(0, 0, 0, 0.02);
+  position: sticky;
+  top: 0;
+}
+.gsc-table td:not(:first-child),
+.gsc-table th:not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.gsc-table tbody tr:hover { background: rgba(0, 0, 0, 0.02); }

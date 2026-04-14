@@ -43,6 +43,10 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         Analytics
       </a>
+      <a href="#" class="nav-item" data-section="search-console">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search Console
+      </a>
       <div class="nav-divider"></div>
       <p class="nav-label">Automation</p>
       <a href="#" class="nav-item" data-section="calendar">
@@ -286,6 +290,37 @@
         <h3>Traffic Overview</h3>
         <p class="empty-state">Connect Google Analytics (GA4) in Settings to see traffic data.</p>
       </div>
+    </section>
+
+    <!-- Search Console Section -->
+    <section id="section-search-console" class="dashboard-section">
+      <div class="section-header">
+        <h3>Google Search Console</h3>
+        <select id="gsc-range">
+          <option value="7">Last 7 days</option>
+          <option value="28" selected>Last 28 days</option>
+          <option value="90">Last 90 days</option>
+        </select>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="gsc-clicks">—</span><span class="stat-label">Clicks</span></div></div>
+        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="gsc-impressions">—</span><span class="stat-label">Impressions</span></div></div>
+        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="gsc-ctr">—</span><span class="stat-label">Avg CTR</span></div></div>
+        <div class="stat-card"><div class="stat-info"><span class="stat-value" id="gsc-position">—</span><span class="stat-label">Avg Position</span></div></div>
+      </div>
+      <div class="card">
+        <h3>Top Search Queries</h3>
+        <div id="gsc-queries-list" class="gsc-table-wrap">
+          <p class="empty-state">Loading...</p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Top Landing Pages</h3>
+        <div id="gsc-pages-list" class="gsc-table-wrap">
+          <p class="empty-state">Loading...</p>
+        </div>
+      </div>
+      <p class="help-text" id="gsc-range-label" style="font-size: 0.85rem; color: var(--text-muted, #888); margin-top: 12px;"></p>
     </section>
 
     <!-- Content Calendar Section -->

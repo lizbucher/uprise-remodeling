@@ -1,5 +1,5 @@
 // Dashboard main logic — routing, data loading, UI interactions
-const { supabase } = await import('./auth.js');
+const { supabase, SUPABASE_URL, SUPABASE_ANON_KEY } = await import('./auth.js');
 
 // ---- Section Routing ----
 const navItems = document.querySelectorAll('.nav-item[data-section]');
@@ -24,6 +24,7 @@ function showSection(sectionId) {
     leads: 'Lead Management',
     reviews: 'Review Manager',
     analytics: 'Analytics',
+    'search-console': 'Search Console',
     calendar: 'Content Calendar',
     approval: 'Approval Queue',
     platforms: 'Connected Platforms',
@@ -344,6 +345,79 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+// ---- Google Search Console ----
+function fmtPct(n) { return (n * 100).toFixed(2) + '%'; }
+function fmtPos(n) { return n.toFixed(1); }
+function fmtInt(n) { return Math.round(n).toLocaleString(); }
+
+async function loadSearchConsole(days = 28) {
+  const url = `${SUPABASE_URL}/functions/v1/gsc-search-analytics?days=${days}`;
+  const ANON_KEY = SUPABASE_ANON_KEY;
+
+  const clicksEl = document.getElementById('gsc-clicks');
+  const imprEl = document.getElementById('gsc-impressions');
+  const ctrEl = document.getElementById('gsc-ctr');
+  const posEl = document.getElementById('gsc-position');
+  const queriesEl = document.getElementById('gsc-queries-list');
+  const pagesEl = document.getElementById('gsc-pages-list');
+  const rangeEl = document.getElementById('gsc-range-label');
+
+  [clicksEl, imprEl, ctrEl, posEl].forEach(el => el && (el.textContent = '…'));
+  if (queriesEl) queriesEl.innerHTML = '<p class="empty-state">Loading...</p>';
+  if (pagesEl) pagesEl.innerHTML = '<p class="empty-state">Loading...</p>';
+
+  try {
+    const res = await fetch(url, { headers: { Authorization: `Bearer ${ANON_KEY}` } });
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+
+    clicksEl.textContent = fmtInt(data.totals.clicks);
+    imprEl.textContent = fmtInt(data.totals.impressions);
+    ctrEl.textContent = fmtPct(data.totals.ctr);
+    posEl.textContent = fmtPos(data.totals.position);
+
+    if (rangeEl) rangeEl.textContent = `Data range: ${data.range.startDate} to ${data.range.endDate} (GSC reports on a ~2-day delay)`;
+
+    const queryRows = data.top_queries.length
+      ? data.top_queries.map(r => `<tr><td>${escapeHtml(r.query)}</td><td>${fmtInt(r.clicks)}</td><td>${fmtInt(r.impressions)}</td><td>${fmtPct(r.ctr)}</td><td>${fmtPos(r.position)}</td></tr>`).join('')
+      : '';
+    queriesEl.innerHTML = queryRows
+      ? `<table class="gsc-table"><thead><tr><th>Query</th><th>Clicks</th><th>Impr.</th><th>CTR</th><th>Pos.</th></tr></thead><tbody>${queryRows}</tbody></table>`
+      : '<p class="empty-state">No query data yet — Search Console typically needs a few days of traffic.</p>';
+
+    const pageRows = data.top_pages.length
+      ? data.top_pages.map(r => {
+          const path = r.page.replace(/^https?:\/\/[^/]+/, '') || '/';
+          return `<tr><td>${escapeHtml(path)}</td><td>${fmtInt(r.clicks)}</td><td>${fmtInt(r.impressions)}</td><td>${fmtPct(r.ctr)}</td><td>${fmtPos(r.position)}</td></tr>`;
+        }).join('')
+      : '';
+    pagesEl.innerHTML = pageRows
+      ? `<table class="gsc-table"><thead><tr><th>Page</th><th>Clicks</th><th>Impr.</th><th>CTR</th><th>Pos.</th></tr></thead><tbody>${pageRows}</tbody></table>`
+      : '<p class="empty-state">No page data yet.</p>';
+  } catch (err) {
+    const msg = `<p class="empty-state">Search Console not connected yet. Add the <code>GSC_SERVICE_ACCOUNT_JSON</code> secret in Supabase and grant the service account access to the GSC property. Error: ${escapeHtml(err.message || String(err))}</p>`;
+    clicksEl.textContent = imprEl.textContent = ctrEl.textContent = posEl.textContent = '—';
+    queriesEl.innerHTML = msg;
+    pagesEl.innerHTML = '';
+  }
+}
+
+const gscRangeSelect = document.getElementById('gsc-range');
+if (gscRangeSelect) {
+  gscRangeSelect.addEventListener('change', (e) => loadSearchConsole(parseInt(e.target.value, 10)));
+}
+
+const gscNavItem = document.querySelector('.nav-item[data-section="search-console"]');
+let gscLoaded = false;
+if (gscNavItem) {
+  gscNavItem.addEventListener('click', () => {
+    if (!gscLoaded) {
+      gscLoaded = true;
+      loadSearchConsole(parseInt(gscRangeSelect?.value || '28', 10));
+    }
+  });
 }
 
 // ---- Initial Load ----
