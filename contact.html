@@ -227,7 +227,16 @@
           </div>
 
           <div class="reveal-right">
-            <div class="contact-form">
+            <div class="contact-form" id="contact-form-card">
+              <div id="form-success" role="status" aria-live="polite" hidden style="padding:28px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;">
+                <h3 style="font-family: var(--font-display); font-size: 28px; margin:0 0 12px; color:#166534;">Thank you — we got your request!</h3>
+                <p style="margin:0 0 10px;font-size:15px;color:#1f2937;line-height:1.6;">A member of the Uprise team will reach out within one business day to schedule your free estimate.</p>
+                <p style="margin:0;font-size:15px;color:#1f2937;line-height:1.6;">Need to reach us sooner? Call <a href="tel:+19132585142" style="color:#0d3a4b;font-weight:600;text-decoration:underline;">(913) 258-5142</a>.</p>
+              </div>
+              <div id="form-error" role="alert" aria-live="assertive" hidden style="padding:20px;background:#fef2f2;border:1px solid #fecaca;border-radius:12px;margin-bottom:24px;">
+                <p style="margin:0;font-size:15px;color:#991b1b;line-height:1.55;">Something went wrong submitting your request. Please try again, or call us directly at <a href="tel:+19132585142" style="color:#991b1b;font-weight:600;text-decoration:underline;">(913) 258-5142</a>.</p>
+              </div>
+              <div id="form-wrap">
               <h3 style="font-family: var(--font-display); font-size: 28px; margin-bottom: 8px;">Request Your Free Estimate</h3>
               <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 28px;">Tell us about your project and we'll get back to you within one business day.</p>
               <form action="https://uprise-remodeling-500.pages.dev/api/contact" method="POST">
@@ -272,6 +281,24 @@
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Request</button>
               </form>
+              </div>
+              <script>
+                (function () {
+                  var params = new URLSearchParams(window.location.search);
+                  var wrap = document.getElementById('form-wrap');
+                  var success = document.getElementById('form-success');
+                  var errorEl = document.getElementById('form-error');
+                  var card = document.getElementById('contact-form-card');
+                  if (params.get('submitted') === 'true' && success && wrap) {
+                    wrap.style.display = 'none';
+                    success.hidden = false;
+                    if (card && card.scrollIntoView) card.scrollIntoView({behavior:'smooth', block:'center'});
+                  } else if (params.get('error') === '1' && errorEl) {
+                    errorEl.hidden = false;
+                    if (card && card.scrollIntoView) card.scrollIntoView({behavior:'smooth', block:'center'});
+                  }
+                })();
+              </script>
             </div>
           </div>
         </div>
